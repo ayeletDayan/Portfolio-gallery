@@ -40,7 +40,7 @@ function renderPortfolio() {
 
 function getPortfolio() {
     var strHtmls = gPortfolio.map((project) => {
-        return `<div class="col-md-4 col-sm-6 portfolio-item"><a class="portfolio-link" data-toggle="modal" href="#portfolioModal1" onclick="getModal('${project.id}')"><div class="portfolio-hover"><div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div></div><img class="img-fluid" src="${project.img}" alt=""></a><div class="portfolio-caption"><h4>${project.name}</h4><p class="text-muted">${project.category}</p></div></div>`
+        return `<div class="col-md-4 col-sm-6 portfolio-item"><a class="portfolio-link" data-toggle="modal" href="#portfolioModal1" onclick="getModal('${project.id}')"><div class="portfolio-hover"><div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div></div><div style="height: 350px; max-width: 350px;" ><img style="height: 100%; width: 100%; object-fit: cover;" class="img-fluid" src="${project.img}" alt=""></div></a><div class="portfolio-caption"><h4>${project.name}</h4><p class="text-muted">${project.category}</p></div></div>`
     })
     return strHtmls.join('');
 }
