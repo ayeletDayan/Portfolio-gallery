@@ -2,8 +2,6 @@ console.log('Starting up');
 
 var gPortfolio = [];
 
-console.log(_creatPortfolio());
-
 function _creatPortfolio() {
     gPortfolio.push(_creatPorject('Bookshop', 'img/portfolio/books.jpg', 'Online bookstore: You can sort by price or title, you can update prices, you can add or delete books.', 'https://ayeletdayan.github.io/Bookshop/', 'Shopping', 'October 2021'));
     gPortfolio.push(_creatPorject('MineSweeper', 'img/portfolio/MineSweeper.jpg', 'Play...', 'https://ayeletdayan.github.io/mineSweeper/', 'Games', 'October 2021'));
@@ -11,6 +9,13 @@ function _creatPortfolio() {
     gPortfolio.push(_creatPorject('Touch the Numbers', 'img/portfolio/touchNums.jpg', 'Play...', 'https://ayeletdayan.github.io/Touch-the-Numbers/', 'Games', 'September 2021'));
     gPortfolio.push(_creatPorject('Bingo', 'img/portfolio/Bingo.jpg', 'Play...', 'https://ayeletdayan.github.io/Bingo/', 'Games', 'September 2021'));
     gPortfolio.push(_creatPorject('Login', 'img/portfolio/Login.jpg', 'User management...', 'https://ayeletdayan.github.io/Login/', 'User management', 'October 2021'));
+    gPortfolio.push(_creatPorject('In The Picture', 'img/portfolio/InThePic.jpg', 'Play...', 'https://ayeletdayan.github.io/InThePicture/', 'Games', 'September 2021'));
+    gPortfolio.push(_creatPorject('Collect the Balls', 'img/portfolio/CollectBalls.jpg', 'Play...', 'https://ayeletdayan.github.io/Collect-the-Balls/', 'Games', 'September 2021'));
+    gPortfolio.push(_creatPorject('Chess', 'img/portfolio/chess.jpg', 'Play...', 'https://ayeletdayan.github.io/Chess/', 'Games', 'September 2021'));
+    gPortfolio.push(_creatPorject('Pacman', 'img/portfolio/pacman.jpg', 'Play...', 'https://ayeletdayan.github.io/Pacman/', 'Games', 'September 2021'));    
+    gPortfolio.push(_creatPorject('Todo', 'img/portfolio/todo.jpg', 'Task management...', 'https://ayeletdayan.github.io/Todo/', 'Task management', 'October 2021'));
+    gPortfolio.push(_creatPorject('Site Data', 'img/portfolio/SitaData.jpg', 'Information on an archeological site, including historical and archeological background, information from excavations, excavation reports ...', 'In preparation', 'Data', 'October 2021')); //insert link
+    gPortfolio.push(_creatPorject('Guess who?', 'img/portfolio/guess.jpg', 'play...', 'https://ayeletdayan.github.io/Guess-me/', 'Games', 'October 2021'));
     return gPortfolio;
 }
 
@@ -29,6 +34,7 @@ function _creatPorject(name, img, description, link, category, date) {
 }
 
 function renderPortfolio() {
+    _creatPortfolio()
     $('.myPortfolio').html(getPortfolio());    
 }
 
@@ -47,7 +53,7 @@ function getProjectById(idx){
 function getModal(idx) {
     var currProject = getProjectById(idx);
     console.log(currProject)
-    var strHtmls = `<h2>${currProject.name}</h2><img class="img-fluid d-block mx-auto" src="${currProject.img}" alt=""><p>Online bookstore: You can sort by price or title, you can update prices, you can add or delete books.</p><a style="font-size: large;" href="${currProject.link}">To the project</a><ul class="list-inline"><li>Date: ${currProject.date}</li><li>Client: coding-academy</li><li>Category: ${currProject.category}</li>`
+    var strHtmls = `<h2>${currProject.name}</h2><img class="img-fluid d-block mx-auto" src="${currProject.img}" alt=""><p>${currProject.description}.</p><a style="font-size: large;" href="${currProject.link}">To the project</a><ul class="list-inline"><li>Date: ${currProject.date}</li><li>Client: coding-academy</li><li>Category: ${currProject.category}</li>`
     
     $('.modal-body').html(strHtmls);
 }
