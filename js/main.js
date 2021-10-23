@@ -16,6 +16,8 @@ function _creatPortfolio() {
     gPortfolio.push(_creatPorject('Todo', 'img/portfolio/todo.jpg', 'Task management...', 'https://ayeletdayan.github.io/Todo/', 'Task management', 'October 2021'));
     gPortfolio.push(_creatPorject('Site Data', 'img/portfolio/SitaData.jpg', 'Information on an archeological site, including historical and archeological background, information from excavations, excavation reports ...', 'In preparation', 'Data', 'October 2021')); //insert link
     gPortfolio.push(_creatPorject('Guess who?', 'img/portfolio/guess.jpg', 'play...', 'https://ayeletdayan.github.io/Guess-me/', 'Games', 'October 2021'));
+    gPortfolio.push(_creatPorject('Bookstore', 'img/portfolio/books-wall.jpg', 'Online bookstore: You can sort by price or title, you can update prices, you can add or delete books... In English (USD) & Hebrew (NIS)', 'https://ayeletdayan.github.io/bookstore/', 'Shopping', 'October 2021'));
+    gPortfolio.push(_creatPorject('CSS practice', 'img/portfolio/css.jpg', 'Website design according to customer requirements...', 'https://ayeletdayan.github.io/CSS-practice/', 'CSS', 'October 2021'));
     return gPortfolio;
 }
 
